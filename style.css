@@ -1,155 +1,155 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* { /* aplica a todos os elementos da página */
+    margin: 0; /* remove qualquer margem padrão que o navegador coloca */
+    padding: 0; /* remove qualquer preenchimento padrão que o navegador coloca */
+    box-sizing: border-box; /* faz com que largura/altura incluam bordas e padding, facilitando o cálculo */
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #fef5f0 0%, #fae8e0 100%);
+body {  /* Estiliza o body (corpo inteiro da página) */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte principal (com fallbacks) */
+    background: linear-gradient(135deg, #fef5f0 0%, #fae8e0 100%); /* Gradiente diagonal de rosa claro (degradê) */
     color: #2d2d2d;
-    line-height: 1.6;
+    line-height: 1.6; /* aumenta o espaçamento entre linhas para melhor legibilidade */
 }
 
 /* ===== MENU ===== */
 .menu {
     background: #9e3e86;
-    padding: 15px 0;
-    position: sticky;
+    padding: 15px 0; /* espaçamento interno: 15px em cima/baixo, 0 nas laterais */
+    position: sticky; /* fixa o menu no topo quando rolar a página */
     top: 0;
     z-index: 100;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .menu ul {
-    width: 90%;
-    margin: 0 auto;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    width: 90%;  /* largura de 90% do container */
+    margin: 0 auto; /* centraliza horizontalmente (margem automática nas laterais) */
+    list-style: none; /* remove as bolinhas/marcadores padrão da lista */
+    display: flex; /* ativa o flexbox para alinhar os itens na horizontal */
+    justify-content: center; /* centraliza os itens horizontalmente */
+    gap: 15px; /* espaço de 15px entre cada item do menu */
+    flex-wrap: wrap; /* permite a quebra de linha se a tela for pequena */
 }
 
 .menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 12px 20px;
-    transition: 0.3s;
+    color: white; 
+    text-decoration: none; /* remove o sublinhado dos links */
+    font-weight: bold; /* negrito */
+    font-size: 20px; 
+    padding: 12px 20px; /* espaçamento interno: 12px cima/baixo, 20px laterais */
+    transition: 0.3s; 
     border-radius: 40px;
 }
 
 .menu ul li a:hover {
-    background: #000000;
+    background: #000000; 
     color: #fff;
 }
 
 /* ===== BANNER ===== */
-.banner-full {
-    width: 109%;
-    display: cover;
+.banner-full { /* container do banner principal*/
+    width: 100%; 
+    display: block; /* garante que o banner ocupe toda a largura disponível e seja tratado como um bloco */
 }
 
-.banner-full img {
-    width: 100%;
-    height: 90vh;
-    min-height: 500px;
-    object-fit: cover;
-    display: block;
+.banner-full img { /* estiliza a imagem do banner para ocupar toda a largura e ter uma altura proporcional */
+    width: 100%; /* faz a imagem ocupar toda a largura do container */
+    height: 90vh; /* altura igual a 90% da altura da janela do navegador*/
+    min-height: 500px; /* altura mínima de 500px (não encolhe abaixo disso) */
+    object-fit: cover;  /* faz a imagem cobrir todo o espaço, podendo ser cortada nas bordas */
+    display: block;  /* remove o espaço extra que imagens inline deixam embaixo */
 }
 
 /* ===== SEÇÃO SOBRE MIM ===== */
 .sobre-section {
     background: #ffffff;
     border-radius: 45px;
-    padding: 30px;
-    margin-bottom: 50px;
+    padding: 30px; /* espaçamento interno de 30px em todos os lados */
+    margin-bottom: 50px;  /* margem inferior de 50px (espaço para próxima seção) */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px
+    width: 90%;  /* largura de 90% do container */
+    margin-left: auto;  /* margem automática à esquerda (ajuda a centralizar) */
+    margin-right: auto;  /* margem automática à direita (ajuda a centralizar) */
+    margin-top: 50px  /* margem superior de 50px (espaço do banner) */
 }
 
 .sobre-section h1 {
     font-size: 50px;
     color: #9e3e86;
-    margin-bottom: 30px;
-    border-left: 5px solid #9e3e86;
+    margin-bottom: 30px; /* margem inferior de 30px (espaço até o conteúdo) */
+    border-left: 5px solid #9e3e86; /* borda sólida roxa à esquerda (efeito de destaque) */
     padding-left: 25px;
 }
 
-.sobre-conteudo {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    align-items: flex-start;
+.sobre-conteudo { /* container que agrupa texto e fotos */
+    display: flex; /* ativa Flexbox */
+    flex-wrap: wrap; /* permite quebrar linha em telas pequenas */
+    gap: 50px; /* espaço de 50px entre o texto e as fotos */
+    align-items: flex-start; /* alinha os itens no topo (início vertical) */
 }
 
-.sobre-texto {
-    flex: 2;
-    min-width: 300px;
+.sobre-texto { 
+    flex: 2; /* ocupa 2 partes do espaço disponível (maior que as fotos) */
+    min-width: 300px; /* largura mínima de 300px (abaixo disso quebra linha) */
 }
 
 .sobre-texto p {
     font-size: 20px;
     color: #666666;
-    margin-bottom: 20px;
-    line-height: 30px;
+    margin-bottom: 20px; /* margem inferior de 20px entre parágrafos */
+    line-height: 30px; /* altura da linha fixa de 30px (espaço entre linhas) */
 }
 
-.sobre-fotos {
-    flex: 2;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
+.sobre-fotos { /* container das fotos do "sobre mim" */
+    flex: 2; /* também ocupa 2 partes do espaço (igual ao texto) */
+    display: flex; /* ativa Flexbox */
+    gap: 30px; 
+    justify-content: center; /* ecntraliza as fotos horizontalmente */
+    flex-wrap: wrap; /* permite quebrar linha em telas pequenas */
 }
 
-.foto-card {
-    flex: 1;
-    min-width: 250px;
-    text-align: center;
+.foto-card { /* cada card individual de foto */
+    flex: 1; /* ocupa 1 parte do espaço (cada foto ocupa espaço igual) */
+    min-width: 250px; /* largura mínima de 250px */
+    text-align: center; /* centraliza o texto da legenda */
 }
 
 /* FOTOS DO SOBRE MIM */
 .foto-card img {
-    width: 100%;
-    max-width: 500px;
-    height: 350px;
-    object-fit: cover;
+    width: 100%; /* largura total do card*/
+    max-width: 500px; /* largura máxima de 500px (não cresce além disso) */
+    height: 350px; /* altura fixa de 350px */
+    object-fit: cover; /* cobre o espaço sem distorcer (corta se necessário) */
     border-radius: 25px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .foto-legenda {
-    margin-top: 15px;
+    margin-top: 15px; /* margem superior de 15px (espaço da foto à legenda) */
     font-size: 18px;
-    color: #9e3e86;
+    color: #9e3e86; 
     font-weight: bold;
 }
 
 /* ===== CONTAINER DAS CATEGORIAS ===== */
 .categoria-container {
-    background: white;
-    border-radius: 45px;
-    padding: 50px;
-    margin-bottom: 50px;
+    background: white; 
+    border-radius: 45px; 
+    padding: 50px; /* Espaçamento interno de 50px */
+    margin-bottom: 50px; /* Margem inferior de 50px */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -30px;
+    width: 90%; /* Largura de 90% */
+    margin-left: auto;            /* Centraliza horizontalmente */
+    margin-right: auto;           /* Centraliza horizontalmente */
+    margin-top: -30px;            /* Margem superior negativa, sobe 30px para sobrepor a seção anterior */
 }
 
-.categoria-titulo {
+.categoria-titulo { 
     font-size: 36px;
     color: #9e3e86;
-    margin-bottom: 20px;
-    padding-left: 20px;
-    border-left: 5px solid #9e3e86;
+    margin-bottom: 20px; /* Margem inferior de 20px */
+    padding-left: 20px; /* Espaço interno à esquerda de 20px */
+    border-left: 5px solid #9e3e86; /* Borda sólida roxa à esquerda (destaque) */
 }
 
 .categoria-titulo h2 {
@@ -157,138 +157,138 @@ body {
     color: #9e3e86;
 }
 
-/* GRID para 2 itens lado a lado */
+ /* Grade de itens (cards de jogos/músicas/livros) */
 .itens-grid {
-    display: flex;
-    gap: 35px;
+    display: flex; /* Ativa Flexbox */
+    gap: 35px; /* Espaço de 35px entre os cards */
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Quebra linha em telas pequenas */
 }
 
-/* Card de cada item */
-.item-card {
-    flex: 1;
-    min-width: 450px;
-    background: #ffffff;
+ /* Cada card individual de hobby */
+ .item-card { 
+    flex: 1; /* Ocupa espaço igual entre os cards */
+    min-width: 450px; /* Largura mínima de 450px (abaixo disso quebra linha) */
+    background: #ffffff; 
     border-radius: 30px;
-    padding: 35px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    padding: 35px; /* Espaçamento interno de 35px */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; /* Animação suave de 0.3s para transformações (como zoom) */
 }
 
-
-.item-titulo {
+.item-titulo { 
     text-align: center;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 3px solid #9e3e86;
+    margin-bottom: 30px; /* Margem inferior de 30px */
+    padding-bottom: 15px; /* Espaço interno inferior de 15px */
+    border-bottom: 3px solid #9e3e86; /* Borda roxa embaixo do título */
 }
 
-.item-titulo h3 {
-    font-size: 28px;
+.item-titulo h3 { 
+    font-size: 28px; 
     color: #9e3e86;
 }
 
 /* Conteúdo (foto + texto lado a lado) */
-.item-conteudo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
+.item-conteudo { 
+    display: flex; /* Ativa Flexbox */
+    flex-direction: row; /* Direção em linha (horizontal) */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 30px; /* Espaço de 30px entre a foto e o texto */
 }
 
 /* FOTOS DOS HOBBIES */
-.item-foto {
-    flex: 1;
-    text-align: center;
+.item-foto { 
+    flex: 1; /* Ocupa 1 parte do espaço */
+    text-align: center; 
 }
 
-.item-foto img {
-    width: 105%;
-    max-width: 280px;
-    height: 200px;
-    object-fit: cover;
+.item-foto img { /* Imagem do hobby */
+    width: 100%;
+    max-width: 280px; /* largura máxima de 280px */
+    height: 200px; /* altura fixa de 200px */
+    object-fit: cover; 
     border-radius: 20px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
 }
 
 /* TEXTO */
-.item-texto {
-    flex: 2;
+.item-texto { /* container do texto dentro do card */
+    flex: 2; /* ocupa 2 partes do espaço (maior que a foto) */
     text-align: left;
 }
 
-.item-texto p {
-    color: #555;
-    font-size: 18px;
-    line-height: 28px;
-    margin-bottom: 12px;
+.item-texto p { 
+    color: #555; 
+    font-size: 18px; 
+    line-height: 28px; 
+    margin-bottom: 12px; /* Margem inferior de 12px entre parágrafos */
 }
 
-.descricao {
-    font-weight: normal;
-    font-size: 18px;
+.descricao { 
+    font-weight: normal; /*nao negrito */
+    font-size: 18px; 
 }
-
-.info-extra {
-    color: #9e3e86;
-    font-weight: bold;
-    margin-top: 12px;
+.info-extra { 
+    color: #9e3e86; 
+    font-weight: bold; 
+    margin-top: 12px; /* Margem superior de 12px */
     font-size: 17px;
 }
 
-.container-album {
-    background: #ffffff;
+/* ===== ÁLBUM ===== */
+.container-album { 
+    background: #ffffff; 
     border-radius: 45px;
-    padding: 50px;
-    margin-bottom: 50px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.album-fotos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas para alinhar 9 fotos */
-    gap: 20px 10px; /* 20px entre as colunas e 10px entre as linhas */
-    justify-items: center;
-    align-items: center;
+    padding: 50px; /* Espaçamento interno de 50px */
+    margin-bottom: 50px; /* Margem inferior de 50px */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    width: 80%; 
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
 }
 
-.foto-card {
-    width: 100%;
-    max-width: 400px;
-    overflow: hidden;
+.album-fotos { /* Grade de fotos do álbum */
+    display: grid; /* Ativa CSS Grid (layout em grade) */
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas com largura igual (1fr = 1 fração) */
+    gap: 20px 10px; /* Espaço entre as linhas: 20px, entre as colunas: 10px */
+    justify-items: center; /* Centraliza os itens dentro das células da grid (horizontal) */
+    align-items: center; /* Centraliza os itens dentro das células da grid (vertical) */
+}
+
+.foto-card-album { /* Cada card de foto no álbum */
+    width: 100%; /* Largura total da célula da grid */
+    max-width: 400px; /* Largura máxima de 400px */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse as bordas */
     border-radius: 12px;
 }
 
-.foto-card img {
-    width: 100%;
-    height: 400px;
+.foto-card-album img {
+    width: 100%; /* Largura total do card */
+    height: 400px; /* Altura fixa de 400px (todas as fotos têm mesma altura) */
     object-fit: cover;
-    display: block;
+    display: block; /* Remove o espaço extra que imagens inline deixam embaixo */
 }
 
 .album-section h1 {
     color: #9e3e86;
     text-align: center;
-    margin-bottom: 40px;
-    font-family: Arial, sans-serif;
+    margin-bottom: 40px; /* Margem inferior de 40px */
+    font-family: Arial, sans-serif; /* Fonte Arial (sobrescreve a fonte padrão) */
 }
 
 /* RODAPÉ */
-.footer {
+.footer { 
     background: #9e3e86;
     color: #fae8e0;
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 20px; /* Espaçamento interno de 20px */
+    margin-top: 30px;/* Margem superior de 30px */
+    width: 100%; 
+    margin-left: auto; /* Centraliza (já que width é 100%, não faz diferença) */
+    margin-right: auto; /* Centraliza */
 }
 
-.footer p {
-    font-size: 18px;
-    margin-bottom: 10px;
+.footer p { 
+    font-size: 18px; 
+    margin-bottom: 10px; /* margem inferior de 10px */
 }
